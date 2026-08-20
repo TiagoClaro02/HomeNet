@@ -21,6 +21,7 @@ odin_code
 # Temporary files
 tmp/
 temp/
+homenet
 
 # OS files
 .DS_Store
