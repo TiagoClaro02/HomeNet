@@ -1,0 +1,5 @@
+{
+    "router": "192.168.1.1",
+    "pihole": "192.168.1.2",
+    "monitor_interval": 10
+}
