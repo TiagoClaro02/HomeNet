@@ -11,6 +11,7 @@ System_Info :: struct {
     uptime:       f64,
     memory:       Memory_Info,
     cpu:          CPU_Info,
+    disk:         Disk_Stats,
 }
 
 get_info :: proc() -> System_Info {
@@ -39,6 +40,7 @@ get_info :: proc() -> System_Info {
         uptime       = get_uptime(),
         memory       = get_memory_info(),
         cpu          = get_cpu_info(previous, current),
+        disk         = get_disk_stats(),
     }
 }
 

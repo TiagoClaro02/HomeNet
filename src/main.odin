@@ -29,4 +29,9 @@ main :: proc() {
     fmt.printf("Load (1m)      : %.2f\n", info.cpu.load_1m)
     fmt.printf("Load (5m)      : %.2f\n", info.cpu.load_5m)
     fmt.printf("Load (15m)     : %.2f\n", info.cpu.load_15m)
+
+    fmt.println("\nDISK:")
+    fmt.printf("Total          : %.2f GB\n", f64(info.disk.total) / 1024 / 1024 / 1024)
+    fmt.printf("Free           : %.2f GB\n", f64(info.disk.free)  / 1024 / 1024 / 1024)
+    fmt.printf("Used           : %.2f GB\n", f64(info.disk.used)  / 1024 / 1024 / 1024)
 }
