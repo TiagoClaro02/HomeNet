@@ -16,6 +16,7 @@ config/config.json
 
 # Odin build output
 odin_code
+ols.json
 *.o
 
 # Temporary files

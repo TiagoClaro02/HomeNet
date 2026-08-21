@@ -3,6 +3,7 @@ package main
 import "core:fmt"
 import "system"
 import "network"
+import "api"
 
 main :: proc() {
 
@@ -83,5 +84,16 @@ main :: proc() {
             route.metric,
         )
     }
+
+    api.set_data(system_info, network_info)
+    
+    api_server, ok := api.start(8080)
+
+    if !ok {
+        fmt.println("Failed to start API")
+        return
+    }
+
+    api.run(&api_server)
 
 }
